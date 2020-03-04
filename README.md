@@ -1,4 +1,4 @@
-# React Native Shape/Area Calculator Demo
+# React Native Shape/Area Calculator Demo (iOS)
 
 I've seen questions online that pertain to using malleable lines/polygons in react-native-maps as well as other useful features, so I decided to put some short demo code up in one place. The features of this code include:
 
