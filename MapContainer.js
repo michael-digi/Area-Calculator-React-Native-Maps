@@ -121,7 +121,7 @@ export default class Map extends React.Component {
           key={index} 
           draggable
           opacity={0.5}
-          onDragEnd={(e) => this.changeCoordinate(e, index)}
+          onDrag={(e) => this.changeCoordinate(e, index)}
           coordinate={point.latlng}
         /> ))
         }
