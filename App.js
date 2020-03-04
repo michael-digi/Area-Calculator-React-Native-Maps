@@ -15,6 +15,7 @@ export default class App extends React.Component {
     errorMessage: null,
   };
 
+  //Check device for Android to see if Sketch will work. 
   componentDidMount() {
     if (Platform.OS === 'android' && !Constants.isDevice) {
       this.setState({
@@ -25,6 +26,7 @@ export default class App extends React.Component {
     }
   }
 
+  //Get permission from user to access location. 
   _getLocationAsync = async () => {
     let { status } = await Permissions.askAsync(Permissions.LOCATION);
     if (status !== 'granted') {
@@ -47,6 +49,7 @@ export default class App extends React.Component {
     })
   };
 
+  //Display a temporary message while user location loads
   render() {
     return (
       <View style={styles.container}>

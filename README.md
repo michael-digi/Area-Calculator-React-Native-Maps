@@ -64,22 +64,22 @@ expo start
 Below are demo snippets of the features this code contains.
 
 ### Connectable Markers
-![](connectmarkers.gif)
+![](gifs/connectmarkers.gif)
 
 ### Stretch Polylines
-![](stretchlines.gif)
+![](gifs/stretchlines.gif)
 
 ### Toggle into Polygon
-![](togglepolygon.gif)
+![](gifs/togglepolygon.gif)
 
 ### Stretch the Polygon
-![](stretchpolygon.gif)
+![](gifs/stretchpolygon.gif)
 
 ### Check the area of Polygon by clicking it
-![](checkarea1.gif)
+![](gifs/checkarea1.gif)
 
 ### Check area after resizing
-![](checkarea2.gif)
+![](gifs/checkarea2.gif)
 
 ## Contributing
 Feel free to repurpose this how you'd like, and if you re-use it in an interesting way please show me!

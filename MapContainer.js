@@ -20,12 +20,8 @@ export default class Map extends React.Component {
     area: ''
   }
 
-  onRegionChange(region) {
-    this.setState({
-      region: region
-    });
-  }
-
+  //Activated by the onPress/onPoiClick prop. It adds coordinates to the 
+  //points and poly states
   addPoints = (e) => {
     this.setState({
       showMarks: true,
@@ -33,7 +29,7 @@ export default class Map extends React.Component {
       poly: [...this.state.poly, e.nativeEvent.coordinate]
     })
   }
-
+  //Set all items displayed on the map to empty/false
   clear = () => {
     this.setState({
       points: [],
@@ -42,7 +38,7 @@ export default class Map extends React.Component {
       showMarks: !this.state.showMarks
     })
   }
-
+  //Toggle between Polylines and their equivalent Polygon
   togglePolygon = () => {
     this.setState({
       polygon: !this.state.polygon,
@@ -55,13 +51,15 @@ export default class Map extends React.Component {
     let newCoordinates = Object.assign({},newEditing);
     newCoordinates[index] = newCoord;
     newEditing = newCoordinates;
-    let transformedCoords = Object.keys(newEditing).map(function (key) { return newEditing[key]; });
+    let transformedCoords = Object.keys(newEditing).map(function (key)
+      { return newEditing[key]; });
     newEditing = transformedCoords;
     this.setState({
       poly: newEditing
     })
   }
-
+  //Uses the calculateArea function imported in from helpers.js to compute the area
+  //of the created Polygon
   onPressPolygon = () => {
     let area = calculateArea(this.state.poly)
     area = area.toFixed(2)
