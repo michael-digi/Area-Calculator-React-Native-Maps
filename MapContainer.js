@@ -110,7 +110,7 @@ export default class Map extends React.Component {
           fillOpacity={0.35} /> :
         <MapView.Polyline 
             coordinates={this.state.poly}
-            strokeWidth={2}
+            strokeWidth={3}
             strokeColor="red"/> :
             null
           }

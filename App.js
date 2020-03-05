@@ -54,7 +54,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
        { this.state.initialLocation === null ?
-          <Text> Currently finding your location... </Text> :
+          <Text style = {styles.text}> Currently finding your location... </Text> :
           <MapContainer initialLocation = {this.state.initialLocation} /> }
       </View>
     );
@@ -67,6 +67,9 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center',
   },
+  text: {
+    marginBottom: 350
+  }
 });
 
 
