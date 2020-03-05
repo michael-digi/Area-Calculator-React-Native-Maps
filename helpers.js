@@ -47,6 +47,22 @@ export function calculateArea(locations) {
 
 }
 
+export function findCenter(coordinates) {
+  let x = coordinates.map(c => c.latitude)
+  let y = coordinates.map(c => c.longitude)
+
+  let minX = Math.min.apply(null, x)
+  let maxX = Math.max.apply(null, x)
+
+  let minY = Math.min.apply(null, y)
+  let maxY = Math.max.apply(null, y)
+
+  return {
+    latitude: (minX + maxX) / 2,
+    longitude: (minY + maxY) / 2
+  }
+}
+
 function calculateAreaInSquareMeters(x1, x2, y1, y2) {
     return (y1 * x2 - x1 * y2) / 2;
     }
@@ -57,4 +73,3 @@ function calculateYSegment(latitudeRef, latitude, circumference) {
 function calculateXSegment(longitudeRef, longitude, latitude, circumference)     {
     return (longitude - longitudeRef) * circumference * Math.cos((latitude * (Math.PI / 180))) / 360.0;
     }
-

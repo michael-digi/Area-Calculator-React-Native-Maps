@@ -7,7 +7,7 @@ import { TouchableOpacity,
          View, 
          Platform 
        } from 'react-native';
-import { calculateArea } from './helpers';
+import { calculateArea, findCenter } from './helpers';
 
 export default class Map extends React.Component {
   
@@ -62,8 +62,12 @@ export default class Map extends React.Component {
   //of the created Polygon
   onPressPolygon = () => {
     let area = calculateArea(this.state.poly)
+    let center = findCenter(this.state.poly, " this is center")
     area = area.toFixed(2)
-    Alert.alert('Area', `The area of this sector is: ${area} sq. meters`)
+    let { latitude, longitude } = center
+    Alert.alert(
+      'Area', 
+      `The area of this sector is: ${area} sq. meters and the center is ${latitude.toFixed(5)} ${longitude.toFixed(5)}`)
     this.setState({
       area: area
     })
