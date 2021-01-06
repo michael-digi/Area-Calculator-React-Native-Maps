@@ -13,7 +13,7 @@
     "@react-navigation/bottom-tabs": "^5.1.1",
     "@react-navigation/native": "^5.0.9",
     "@react-navigation/stack": "^5.1.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "date-arithmetic": "^4.1.0",
     "expo": "~36.0.0",
     "expo-constants": "^8.0.0",
